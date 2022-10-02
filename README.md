@@ -1,5 +1,7 @@
-# 🌍🗺 Welcome to Openguess!
 
+![](https://i.imgur.com/Y4AhwQ8.png)
+![](https://i.imgur.com/5yDCXYO.png)
+# 🌍🗺 Welcome to Openguess!
 You can play right now on https://openguess.pl/ or host it all by yourself!
 
 `DISCLAIMER! The tutorial below is not 100% done, a few things will not work right now because of it!`
