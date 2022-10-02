@@ -1,0 +1,148 @@
+.Heart--Icon {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 8.15rem;
+  transform: scale(0.75);
+  color: black;
+}
+
+.MapCard--Heart--Clicked {
+  animation-name: heart-animation;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(.05,.52,.41,1);
+}
+
+@keyframes heart-animation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.MapCard {
+  position: relative;
+}
+
+.MapCard--Container {
+    background-color: #fff;
+    padding: 24px 30px;
+    color: #000;
+    margin: 8px 4px;
+    transition: all 0.25s ease;
+    border-radius: 1.5rem;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 250ms cubic-bezier(.05,.52,.41,1);
+    position: relative;
+}
+
+.MapCard--Container:hover {
+  transform: perspective(960px) rotateX(15deg) translate(0, -5px);
+}
+
+.MapCard--Container:hover .MapCard--Header--Line {
+  width: 64px;
+}
+
+.MapCard--Animate-FadeIn {
+  animation-delay: 0ms;
+  animation-duration: 0.5s;
+  animation-name: MapCard--Animate-FadeIn;
+  animation-timing-function: cubic-bezier(.05,.52,.41,1);
+}
+
+@keyframes MapCard--Animate-FadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0%);
+      transform: translate(0, 64px);
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
+.MapCard--Header--Subtitle {
+  width: 140px;
+  padding-right: 8px;
+}
+
+.MapCard--Header--Subtitle--Text {
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.MapCard--Header--Title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-top: -4px;
+  letter-spacing: -0.05rem;
+}
+
+.MapCard--Header--Line {
+  width: 54px;
+  height: 4px;
+  background-color: rgb(248, 50, 93);
+  margin-bottom: 10px;
+  border-radius: 32px;
+  transition: all 250ms cubic-bezier(.05,.52,.41,1);
+}
+
+.MapCard--Image {
+  width: 100px;
+  height: 132px;
+  border-radius: 128px;
+  transition: all 250ms cubic-bezier(.05,.52,.41,1);
+}
+
+.MapCard--Container:hover .MapCard--Image {
+  transform: perspective(960px) rotateY(-25deg) translate(5px, 0);
+}
+
+.MapCard--Image--Img {
+  width: 100px;
+  height: 132px;
+  border-radius: 16px;
+}
+
+.MapCard--Header--Button {
+  width: 96px;
+  height: 32px;
+  background-color: #000;
+  border-radius: 32px;
+  margin-top: 16px;
+  color: white;
+  font-size: 10pt;
+  font-weight: 600;
+  transition: all 250ms cubic-bezier(.05,.52,.41,1);
+}
+
+.MapCard--Header--Button:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .MapCard {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .MapCard--Container {
+    width: calc(97% + 2px);
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 250ms cubic-bezier(.05,.52,.41,1);
+  }
+}

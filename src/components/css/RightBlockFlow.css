@@ -1,0 +1,20 @@
+.RightBlockFlow {
+    overflow: hidden;
+    background-color: white;
+}
+
+.RightBlockFlow--Container {
+    height: 24px;
+    width: 10800px;
+    background: url('../images/rightblock-flow.svg') repeat-x;
+    animation: RightBlockFlow--Animation--Slide 8s linear infinite;
+}
+
+@keyframes RightBlockFlow--Animation--Slide {
+    0% {
+      transform: translate3d(-720px, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1800px, 0, 0);
+    }
+  }

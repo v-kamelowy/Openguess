@@ -1,0 +1,61 @@
+.Footer--Container {
+    width: 100%;
+    background-color: white;
+    padding: 12px 8px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    letter-spacing: -0.025rem;
+}
+
+.Footer--Container ul {
+    display: flex;
+    flex-direction: row;
+    justify-items: baseline;
+    align-items: baseline;
+    list-style: none;
+}
+
+.Footer--Container ul li {
+    margin: 0 12px;
+    padding: 0;
+    font-size: 12px;
+    transition: all 0.25s ease;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+}
+
+.Footer--Items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: -0.05rem;
+}
+
+.Footer--CrossingLine {
+    height: 2px;
+    width: 0;
+    background-color: rgb(225, 35, 75);
+    margin: 0 auto;
+    transition: all 0.5s cubic-bezier(.05,.52,.41,1);
+    margin-bottom: 0px;
+    border-radius: 8px;
+}
+
+.Footer--Container ul li:hover .Footer--CrossingLine {
+    width: calc(100%);
+}
+
+.Footer--Container ul li:hover {
+    color: black;
+}
+
+.Footer--Copyright--Text {
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+}

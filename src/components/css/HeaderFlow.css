@@ -1,0 +1,22 @@
+.HeaderFlow {
+    overflow: hidden;
+}
+
+.HeaderFlow--Container {
+    height: 24px;
+    width: 10800px;
+    background: url('../images/header.svg') repeat-x;
+    animation: HeaderFLow--Animation--Slide 8s linear infinite;
+    background-color: #efefef;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+@keyframes HeaderFLow--Animation--Slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1080px, 0, 0);
+    }
+  }

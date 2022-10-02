@@ -1,0 +1,443 @@
+.Openguess {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.Openguess--MiniMap {
+    width: 420px;
+    height: 280px;
+    border-radius: 1.5rem;
+    z-index: 10;
+    opacity: 1;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+    pointer-events: auto;
+}
+
+.Openguess--MiniMap--Wrapper {
+    position: absolute;
+    bottom: 32px;
+    right: 72px;
+    pointer-events: none;
+}
+
+.Openguess--MiniMap--Bigger {
+    width: 540px;
+    height: 380px;
+    border-radius: 1.5rem;
+}
+
+.Openguess--MiniMap--Submit {
+    position: absolute;
+    bottom: 32px;
+    right: 72px;
+    width: 420px;
+    height: 28px;
+    background-color: white;
+    font-weight: 600;
+    color: black;
+    z-index: 25;
+    border-bottom-left-radius: 1.35rem;
+    border-bottom-right-radius: 1.35rem;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+}
+
+.Openguess--MiniMap--Submit:hover {
+    color: white;
+    background-color: rgb(225, 35, 75);
+}
+
+.Openguess--MiniMap--Submit--Disabled {
+    color: white;
+    background-color: black;
+    cursor: not-allowed;
+}
+
+.Openguess--MiniMap--Submit--Disabled:hover {
+    color: white;
+    background-color: black;
+    cursor: not-allowed;
+}
+
+.Openguess--MiniMap--Submit--Bigger {
+    width: 540px;
+}
+
+.Openguess--UI--Button {
+    width: 64px;
+    height: 48px;
+    color: black;
+    background-color: white;
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms cubic-bezier(.05,.52,.41,1);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.Openguess--UI--Button--Icon {
+    margin-left: 16px;
+    font-size: 22px;
+}
+
+.Openguess--UI--Button:hover {
+    transform: translateX(8px);
+    background-color: #e1234b;
+    color: white;
+}
+
+.Openguess--UI--Button:active {
+    transform: translateX(4px);
+}
+
+.Openguess--UI--ButtonList {
+    position: absolute;
+    bottom: 72px;
+    right: 28px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    z-index: 6;
+}
+
+.Openguess--MiniMap--ResizeButton {
+    position: absolute !important;
+    top: 16px !important;
+    left: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    z-index: 100;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.15));
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+    cursor: pointer;
+}
+
+.Openguess--MiniMap--ResizeButton:hover {
+    transform: scale(1.1);
+}
+
+.Openguess--MiniMap--ResizeIcon img {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    line-height: 48px !important;
+    transition: all 0.1s cubic-bezier(.05,.52,.41,1);
+}
+.Openguess--MiniMap--ResizeIcon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.Openguess--MiniMap--ResizeButton:active {
+    transform: scale(0.9);
+}
+
+.Openguess--StreetView {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    filter: saturate(1.15);
+}
+
+#player_marker img {
+    border: 3px solid rgb(255, 255, 255) !important;
+    border-radius: 50%;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.Openguess--Compass {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: 112px;
+    height: 112px;
+    z-index: 50;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.25));
+    transition: all 250ms cubic-bezier(.05,.52,.41,1);
+}
+
+.Openguess--Compass:hover {
+    transform: scale(1.1);
+}
+
+.Openguess--Compass:active {
+    transform: scale(0.9);
+}
+
+#Openguess--Compass--Neddle {
+    width: 96px;
+    height: 96px;
+    pointer-events: none;
+    filter: saturate(115%);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.Openguess--UserTab {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 50;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+.Openguess--UserTab--Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /*
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    */
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.1));
+    padding: 8px 0;
+}
+
+.Openguess--UserTab--Nickname {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-left: 32px;
+}
+
+.Openguess--UserTab--VertLine {
+    width: 1px;
+    height: 100%;
+    background-color: rgb(200, 200, 200);
+    margin: 0 16px;
+}
+
+.Openguess--UserTab--Avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+/* DEBUG */
+.Debug--GetScore {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    width: 360px;
+    height: 28px;
+    background-color: white;
+    font-weight: 600;
+    color: black;
+    z-index: 100;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.Debug--GetScore:active {
+    transform: translateY(2px);
+}
+.Debug--GetReverse {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 128px;
+    height: 48px;
+    background-color: white;
+    color: black;
+    z-index: 100;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.Debug--GetReverse:active {
+    transform: translateY(2px);
+}
+/* END DEBUG */
+
+.Openguess--GuessUI--Timer--Wrapper {
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+#timer-value {
+    text-align: center;
+}
+
+.Openguess--GuessUI--Timer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 184px;
+    height: auto;
+    z-index: 50;
+    pointer-events: none;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.15));
+    background-color: rgb(255, 255, 255);
+    padding: 4px 45px;
+    padding-top: 8px;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-weight: 800;
+    font-size: 2rem;
+    color: black;
+}
+
+.Openguess--GuessUI--Timer h5 {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: -8px;
+}
+
+.Openguess--GuessUI--Timer--Values {
+    margin-left: 1px;
+}
+
+.Openguess--GuessUI--Rounds {
+    position: absolute;
+    top: 134px;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 50;
+    pointer-events: none;
+    color: white;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.15));
+    background-color: #e1234b;
+    padding: 2px 28px;
+    padding-left: 38px;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 4rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.Openguess--GuessUI--Rounds a {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.Openguess--GuessUI--ScoreBoard {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 50;
+    pointer-events: none;
+    color: white;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.15));
+    background-color: black;
+    padding: 4px 42px;
+    padding-top: 8px;
+    padding-left: 52px;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.Openguess--GuessUI--ScoreBoard h5 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: -8px;
+}
+
+.Openguess--GuessUI--ScoreBoard a {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+.gmnoprint div[style="position: absolute"] {
+    display: none !important;
+}
+
+.gm-style-cc {
+    display: none !important;
+}
+
+img[alt="Google"] {
+    display: none !important;
+}
+
+.Openguess--LoadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    transition: all 250ms cubic-bezier(.05,.52,.41,1);
+}
+
+.Openguess--LoadingScreen--Text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+@keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+  }

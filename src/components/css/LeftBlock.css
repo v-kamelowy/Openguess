@@ -1,0 +1,215 @@
+.LeftBlock {
+    transition: all 0.1s ease;
+    background-color: #efefef;
+    position: relative;
+}
+
+.LeftBlock--Container {
+    position: relative;
+}
+
+.LeftBlock--Appear {
+    animation-delay: 0ms;
+    animation-duration: 0.5s;
+    animation-name: Block--Animate-FadeIn;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================== SMALL MOBILE ===================== */
+@media screen and (max-width: 619px) {
+    .LeftBlock {
+        width: 100%;
+        height: 580px;
+        background-color: #efefef;
+        color: #444;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .LeftBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 48px;
+        max-width: 1080px;
+    }
+    
+    .LeftBlock--LeftSide {
+        width: 100%;
+    }
+    
+    .LeftBlock--Rightside {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .LeftBlock--Rightside--Title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+    
+    .LeftBlock--Rightside--Subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .LeftBlock--LeftSide--Image--Img {
+        transform:  perspective(960px) rotateX(0deg);
+        width: 512px;
+        height: 300px;
+        margin-top: 48px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .LeftBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateX(15deg);
+        width: 512px;
+        margin-top: 42px;
+        height: auto;
+    }
+}
+
+/* ===================== BIG MOBILE ===================== */
+
+@media screen and (min-width: 620px) and (max-width: 885px) {
+    .LeftBlock {
+        width: 100%;
+        height: 380px;
+        background-color: #efefef;
+        color: #444;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .LeftBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    
+    .LeftBlock--LeftSide {
+        width: 70%;
+    }
+    
+    .LeftBlock--Rightside {
+        width: 30%;
+        text-align: left;
+    }
+    
+    .LeftBlock--Rightside--Title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+    
+    .LeftBlock--Rightside--Subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .LeftBlock--LeftSide--Image--Img {
+        transform:  perspective(360px) rotateY(10deg);
+        width: 240px;
+        height: 140px;
+        margin-right: 24px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .LeftBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateY(25deg);
+        width: 240px;
+        height: auto;
+        margin-right: 8px;
+    }
+}
+
+/* ===================== PC ===================== */
+
+@media screen and (min-width: 886px) {
+    .LeftBlock {
+        width: 100%;
+        height: 600px;
+        background-color: #efefef;
+        color: #444;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .LeftBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    
+    .LeftBlock--LeftSide {
+        width: 70%;
+    }
+    
+    .LeftBlock--Rightside {
+        width: 30%;
+        text-align: left;
+    }
+    
+    .LeftBlock--Rightside--Title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+    
+    .LeftBlock--Rightside--Subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .LeftBlock--LeftSide--Image--Img {
+        transform:  perspective(360px) rotateY(5deg);
+        width: 420px;
+        height: 245px;
+        margin-right: 32px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .LeftBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateY(15deg);
+        margin-right: 8px;
+    }
+}

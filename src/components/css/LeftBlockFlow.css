@@ -1,0 +1,20 @@
+.LeftBlockFlow {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.LeftBlockFlow--Container {
+    height: 24px;
+    width: 10800px;
+    background: url('../images/leftblock-flow.svg') repeat-x;
+    animation: LeftBlockFlow--Animation--Slide 8s linear infinite;
+}
+
+@keyframes LeftBlockFlow--Animation--Slide {
+    0% {
+      transform: translate3d(-720px, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1800px, 0, 0);
+    }
+  }

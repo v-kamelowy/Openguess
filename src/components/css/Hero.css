@@ -1,0 +1,143 @@
+.Hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 72px;
+    padding-bottom: 256px;
+    padding-top: 224px;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, rgba(72, 36, 98, 0), rgba(72, 36, 98, 0.1), rgba(72, 36, 984, 0.15), rgb(72, 36, 98)), url('../images/hero_bubble.webp'), linear-gradient(35deg, rgba(38,28,105,1) 0%, rgba(255,5,102,1) 50%, rgba(255,179,36,1) 100%);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    margin-top: -96px;
+    animation: bubbles 10s ease-in-out infinite;
+}
+
+@keyframes bubbles {
+	0% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
+}
+
+.Hero--Appear {
+    animation-delay: 0ms;
+    animation-duration: 0.5s;
+    animation-name: Block--Animate-FadeIn;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Hero--Container {
+    position: relative;
+    text-align: center;
+    max-width: 960px;
+    width: 100%;
+}
+
+.Hero--Header {
+    margin-top: 64px;
+}
+
+.Hero--Header--Title {
+    font-size: 2rem;
+    font-weight: 700 !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: white;
+    letter-spacing: -0.025rem;
+    margin-top: 6rem;
+}
+
+.Hero--Header--Subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.Hero--Header--Button {
+    padding: 12px 24px;
+    border-radius: 2rem;
+    background-color: white;
+    color: black;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+    margin-bottom: 2rem;
+}
+
+.Hero--Header--Button--Text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.Hero--Header--Button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.Hero--Header--Button:hover .Hero--Header--Button--Text {
+    color: white;
+    font-weight: 700;
+}
+
+.effect01 {
+    color: #fff;
+    background: rgb(91,31,163);
+    background: linear-gradient(65deg, rgba(91,31,163,1) 0%, rgba(237,24,121,1) 52%, rgba(255,129,66,1) 100%);
+    overflow: hidden;
+    position: relative;
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+  }
+  
+  .effect01:hover {
+    background-color: #fff;
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.35);
+    filter: brightness(1.25);
+  }
+  
+  .effect01 span {
+    transition: all .2s cubic-bezier(.05,.52,.41,1);
+    z-index: 2;
+  }
+  
+  .effect01:hover span {
+    color: #333;
+  }
+  
+  .effect01:after {
+    background: #fff;
+    border: 0 solid rgba(255, 255, 255, 0.742);
+    content: '';
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 0.5s cubic-bezier(.05,.52,.41,1);
+    z-index: 1;
+  }
+  
+  .effect01:hover::after {
+    background: #fff;
+    border: 20px solid rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    left: 120%;
+    transform: rotate(40deg);
+  }

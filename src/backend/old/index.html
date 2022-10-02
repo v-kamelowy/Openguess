@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/open_logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Openguessr - Free Open-Source World Guessing Game</title>
+    <meta name="title" content="Openguessr - Free Open-Source World Guessing Game">
+    <meta name="description" content="Openguessr is free, open-source world guessing game, where you have to find your current position on the map. Choose one of the prepared maps and see if you can find your way around!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kamelowy.xyz/">
+    <meta property="og:title" content="Openguessr - Free Open-Source World Guessing Game">
+    <meta property="og:description" content="Openguessr is free, open-source world guessing game, where you have to find your current position on the map. Choose one of the prepared maps and see if you can find your way around!">
+    <meta property="og:image" content="https://kamelowy.xyz/img/openguessr_embed.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kamelowy.xyz/">
+    <meta property="twitter:title" content="Openguessr - Free Open-Source World Guessing Game">
+    <meta property="twitter:description" content="Openguessr is free, open-source world guessing game, where you have to find your current position on the map. Choose one of the prepared maps and see if you can find your way around!">
+    <meta property="twitter:image" content="https://kamelowy.xyz/img/openguessr_embed.png">
+    <meta content="#ED4747" data-react-helmet="true" name="theme-color" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Open+Sans:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./img/openguessr.svg" id="navbar-oglogo" width="256px" height="auto" class="d-inline-block align-top" alt="">
+        </a>
+        <ul class="nav navbar-nav ms-auto">
+          <li class="nav-item">
+            <div id="avatar">
+              <a class="nav-link nav-avatar" href="./account.html"><img src="images/default-avatar.png"></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <!--<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel_div1" class="d-block carousel-img">
+            <img id="carousel_div1_img" src="./img/mapedit.png"/>
+            <div>
+              <center>
+              <img id="logo_div1" src="./img/openguessr.svg" width="224px" height="auto">
+              <h5>Znudzony zwykłymi mapami?<br>Wypróbuj nasz <a href="https://kamelowy.xyz/edit" target="_blank">Edytor!</a></h5>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel_div2" class="d-block carousel-img">
+          <img id="carousel_div2_img" src="./img/adblock.png"/>
+            <div>
+              <center>
+              <img id="logo_div2" src="./img/openguessr.svg" width="224px" height="auto">
+              <h5>Problem z mapami?<br>Pobierz <a href="https://ublockorigin.com/" target="_blank">uBlock Origin!</a></h5>
+              </center>
+            </div>
+          </div>
+        </div>
+        <!--
+        <div class="carousel-item">
+          <div class="carousel_div3" class="d-block carousel-img">
+          <img id="carousel_div3_img" src="./img/mapedit.svg"/>
+            <div>
+              <img id="logo_div3" src="./img/openguessr.svg" width="224px" height="auto">
+              <h5>Wypróbuj Edytor Map!</h5>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Poprzedni</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Następny</span>
+      </button>
+    </div>
+  <main>
+    <!--Zwykłe Mapy-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12">
+          <div id="titleMaps">
+            <h1 class="undraggable">WYBIERZ MAPĘ</h1>
+            <center>
+            <hr>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="zwykle">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="card card-europe">
+              <div class="card-body">
+                <h5 class="undraggable">Europa</h5>
+                <hr>
+                <p class="card-text undraggable">Stary Kontynent <br>już czeka na odkrycie!</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('europe')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card card-usa">
+              <div class="card-body">
+                <h5 class="undraggable">USA</h5>
+                <hr>
+                <p class="card-text undraggable">Uwaga! Każde miejsce<br>wygląda jak Nevada!</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('usa')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card card-poland">
+              <div class="card-body">
+                <h5 class="undraggable">Polska</h5>
+                <hr>
+                <p class="card-text undraggable">Witamy na szlaku<br>Rzeczpospolitej!</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('poland')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="card card-warsaw">
+              <div class="card-body">
+                <h5 class="undraggable">Warszawa</h5>
+                <hr>
+                <p class="card-text undraggable">Stolica Polski stoi<br>przed tobą otworem!</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('warsaw')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card card-czestochowa">
+              <div class="card-body">
+                <h5 class="undraggable">Częstochowa</h5>
+                <hr>
+                <p class="card-text undraggable">Co druga ulica nazwana<br>jest po Świętym.</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('czestochowa')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card card-trojmiasto">
+              <div class="card-body">
+                <h5 class="undraggable">Trójmiasto</h5>
+                <hr>
+                <p class="card-text undraggable">Według opinii wielu<br>Dwójmiasto i Sopot.</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('trojmiasto')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Specjalne Mapy-->
+    <div class="container">
+      <!--
+      <div class="row">
+        <div class="col-xxl-12">
+          <div id="titleMaps">
+            <h1>MAPY SPECJALNE</h1>
+            <center>
+            <hr>
+            </center>
+          </div>
+        </div>
+      </div>
+      -->
+      <div id="specjalne">
+      <div class="row">
+          <div class="col-xl-6">
+            <div class="card card-fkl">
+              <div class="card-body">
+                <h5 class="undraggable">Discord FKL</h5>
+                <hr>
+                <p class="card-text undraggable">Mapa dla kolegów<br>z Discorda.</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('fkl')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="undraggable">Custom</h5>
+                <hr>
+                <p class="card-text undraggable">Użyj własnej mapy z pliku .ogmap.<br>Aby stworzyć mapę, użyj Edytora.</p>
+                <button id="btn_usa" class="btn btn-danger" onclick="setMap('custom')">Zagraj</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Specjalne Mapy-->
+<div class="container">
+  <div class="row">
+    <div class="col-xxl-12">
+      <div id="titleTools">
+        <h1 class="undraggable">NARZĘDZIA</h1>
+        <center>
+        <hr>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tools">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="card card-editor">
+          <div class="card-body">
+            <h5 class="undraggable">Edytor Map Openguessr</h5>
+            <hr>
+            <p class="card-text undraggable">Stwórz własną mapę<br>i użyj jej do rozgrywki!</p>
+            <button id="btn_usa" class="btn btn-danger" onclick="window.location.href = './edit.html'">Przejdź do Edytora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="undraggable">
+  Kamil Czarnecki	&copy; 2022
+</footer>
+<!--
+  <button id="btn_usa" class="btn btn-danger" onclick="setMap('usa')">Zagraj</button>
+    <main class="grid">
+      <header>
+        <img src="img/openguessr.svg" class="undraggable" id="openguessr" />
+        <br>
+        <button id="btn_start" class="btn btn-dark disabled" onclick="window.location.href='geo.html';">START</button>
+        <br>
+        <button id="btn_pl" class="btn btn-danger" onclick="setMapPL()">Polska</button>
+        <button id="btn_eu" class="btn btn-danger" onclick="setMapEU()">Europa</button>
+        <button id="btn_cz" class="btn btn-danger" onclick="setMapCZ()">Częstochowa</button>
+        <br>
+        <button id="btn_tr" class="btn btn-danger" onclick="setMapTR()">Dwójmiasto i Sopot</button>
+        <button id="btn_wwa" class="btn btn-danger" onclick="setMapWWA()">Warszawa</button>
+        <br>
+        <button id="btn_ndg" class="btn btn-danger" onclick="setMapNDG()">Nowy Dwór Gdański</button>
+        <button id="btn_fkl" class="btn btn-danger" onclick="setMapFKL()">FKL</button>
+        <br>
+        <button id="btn_usa" class="btn btn-danger" onclick="setMapUSA()">Stany Zjednoczone</button>
+        <br>
+        <button id="btn_custom" class="btn btn-danger" onclick="setMapCUSTOM()">Użyj swojej mapy</button>
+        <button id="btn_editor" class="btn btn-danger" onclick="window.location.href='edit.html';">Edytor Map</button>
+        
+      </header>
+    </main>
+    <div id="ublock">
+      <a href="https://ublockorigin.com/" target="_blank"><img src="./img/ublock.png" id="ublock_img" /></a>
+    </div>
+    -->
+    <div id="popup-black">
+      &nbsp;
+    </div>
+      <div id="popup-settings">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ustawienia</h5>
+            <hr>
+            <div class="form-group">
+              <label id="czas_txt" for="czas">LIMIT CZASOWY</label><br>
+              <input type="range" min="0" max="6" value="0" class="form-control-range" id="czas"><br>
+              <span id="czas_val">Brak</span>
+              <br><br>
+            </div>
+            <div class="form-group">
+              <label id="tryb_txt" for="tryb">TRYB GRY</label>
+              <select class="form-select" id="tryb">
+                <option>Normal</option>
+                <option>No Move</option>
+              </select>
+            </div>
+            <a class="btn btn-danger" onclick="startGameSettings();">Rozpocznij</a>
+          </div>
+        </div>
+      </div>
+    <script>
+      let pblack = document.getElementById("popup-black");
+      let psettings = document.getElementById("popup-settings");
+      let psettingscard = document.getElementById("popup-settings").getElementsByClassName("card")[0];
+      psettings.style.pointerEvents = "none";
+      psettingscard.style.pointerEvents = "all";
+      pblack.addEventListener("click", function() {
+        pblack.style.display = "none";
+        psettings.style.display = "none";
+        psettingscard.style.display = "none";
+        sessionStorage.clear();
+      });
+      var czas = document.getElementById("czas");
+      let czas_value = 0;
+      czas.addEventListener("input", function() {
+        czas_value = czas.value;
+        switch (czas_value){
+          case "0":
+            document.getElementById("czas_val").innerHTML = "Brak";
+            break;
+          case "1":
+            document.getElementById("czas_val").innerHTML = "15 sekund";
+            break;
+          case "2":
+            document.getElementById("czas_val").innerHTML = "30 sekund";
+            break;
+          case "3":
+            document.getElementById("czas_val").innerHTML = "1 minuta";
+            break;
+          case "4":
+            document.getElementById("czas_val").innerHTML = "3 minuty";
+            break;
+          case "5":
+            document.getElementById("czas_val").innerHTML = "5 minut";
+            break;
+          case "6":
+            document.getElementById("czas_val").innerHTML = "10 minut";
+            break;
+          }
+        console.log(czas_value);
+      });
+      var tryb = document.getElementById("tryb");
+      let tryb_value = "Normal";
+      tryb.addEventListener("change", function() {
+        tryb_value = tryb.value;
+        console.log(tryb_value);
+      });
+    </script>
+    <div id="file-select">
+      <form enctype="multipart/form-data">
+        <input id="upload" type=file accept=".ogmap" name="files[]" size=30/>
+      </form>
+    </div>
+    <div id="loader-wrapper" class="loader-wrapper" scroll="no">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <script>
+      function fadeOutEffect() {
+          var fadeTarget = document.getElementById("loader-wrapper");
+          var fadeEffect = setInterval(function () {
+              if (!fadeTarget.style.opacity) {
+                  fadeTarget.style.opacity = 1.1;
+              }
+              if (fadeTarget.style.opacity > 0) {
+                  fadeTarget.style.opacity -= 0.05;
+              } else {
+                  fadeTarget.style.display = "none";
+                  clearInterval(fadeEffect);
+              }
+          }, 1);
+      }
+      window.addEventListener('load', fadeOutEffect());
+    </script>
+    <script type="text/javascript" src="./mapselect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!--<script type="module" src="/main.js"></script>-->
+  </body>
+</html>

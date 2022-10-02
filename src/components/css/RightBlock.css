@@ -1,0 +1,213 @@
+.RightBlock {
+    transition: all 0.1s ease;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.RightBlock--Container {
+    position: relative;
+}
+
+.RightBlock--Appear {
+    animation-delay: 0ms;
+    animation-duration: 0.5s;
+    animation-name: Block--Animate-FadeIn;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================== SMALL MOBILE ===================== */
+@media screen and (max-width: 619px) {
+    .RightBlock {
+        width: 100%;
+        height: 580px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .RightBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 48px;
+        max-width: 1080px;
+    }
+    
+    .RightBlock--LeftSide {
+        width: 100%;
+    }
+    
+    .RightBlock--Rightside {
+        width: 100%;
+        text-align: right;
+    }
+    
+    .RightBlock--Rightside--Title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: black;
+    }
+    
+    .RightBlock--Rightside--Subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .RightBlock--LeftSide--Image--Img {
+        transform:  perspective(960px) rotateX(0deg);
+        width: 512px;
+        height: 300px;
+        margin-top: 48px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .RightBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateX(15deg);
+        width: 512px;
+        margin-top: 42px;
+        height: auto;
+    }
+}
+
+/* ===================== BIG MOBILE ===================== */
+
+@media screen and (min-width: 620px) and (max-width: 885px) {
+    .RightBlock {
+        width: 100%;
+        height: 380px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .RightBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    
+    .RightBlock--LeftSide {
+        width: 70%;
+    }
+    
+    .RightBlock--Rightside {
+        width: 30%;
+        text-align: right;
+    }
+    
+    .RightBlock--Rightside--Title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: black;
+    }
+    
+    .RightBlock--Rightside--Subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .RightBlock--LeftSide--Image--Img {
+        transform:  perspective(360px) rotateY(-10deg);
+        width: 240px;
+        height: 140px;
+        margin-left: 24px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .RightBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateY(-25deg);
+        margin-left: 8px;
+    }
+}
+
+/* ===================== PC ===================== */
+
+@media screen and (min-width: 886px) {
+    .RightBlock {
+        width: 100%;
+        height: 600px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease;
+    }
+    
+    .RightBlock--Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    
+    .RightBlock--LeftSide {
+        width: 70%;
+    }
+    
+    .RightBlock--Rightside {
+        width: 30%;
+        text-align: right;
+    }
+    
+    .RightBlock--Rightside--Title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: black;
+    }
+    
+    .RightBlock--Rightside--Subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.05rem;
+    }
+    
+    .RightBlock--LeftSide--Image--Img {
+        transform:  perspective(360px) rotateY(-5deg);
+        width: 420px;
+        height: 245px;
+        margin-left: 32px;
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        transition-delay: 100ms;
+    }
+
+    .RightBlock--LeftSide--Image--Img:hover {
+        transform:  perspective(360px) rotateY(-15deg);
+        margin-left: 8px;
+    }
+}

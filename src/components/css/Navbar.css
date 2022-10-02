@@ -1,0 +1,189 @@
+.Navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 60;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+}
+
+.Navbar--Nav {
+    width: 100%;
+    background-color: white;
+}
+
+.Navbar--Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    padding-top: 14px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.Navbar--Container > ul {
+    display: flex;
+    flex-direction: row;
+    justify-items: baseline;
+    align-items: baseline;
+    list-style: none;
+}
+
+.Navbar--Container > ul > li {
+    margin: 0 12px;
+    padding: 0;
+    font-size: 16px;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+}
+
+.Navbar--Items--HorizontalLine {
+    height: 1px;
+    background-color: #ff4747;
+    margin: 0 auto;
+    max-width: 8px;
+    transition: all 0.5s cubic-bezier(.05,.52,.41,1);
+}
+
+.Navbar--Container > ul > li:hover {
+    color: #ff4747;
+}
+
+.Navbar--Items--SignIn:hover .Navbar--Items--HorizontalLine {
+    width: 100%;
+    max-width: 128px;
+}
+
+#Navbar--Items--LogOut {
+    margin-left: 16px;
+}
+
+#Navbar--Items--LogOut:hover {
+    cursor: pointer;
+}
+
+.Navbar--Items--Avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+}
+
+.Navbar--Items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: -0.05rem;
+}
+
+.Navbar--Items--Avatar:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+.Navbar--Items--Login--Icon {
+    width: 96px;
+    height: auto;
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 959px) {
+    .Navbar--Logo {
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        width: 128px;
+        cursor: pointer;
+        pointer-events: all;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .Navbar--Logo:hover {
+        transform: scale(1.05);
+    }
+
+    .Navbar--Logo:active {
+        transform: scale(0.9);
+    }
+
+    .Navbar--Container > ul > li {
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        font-size: 12px;
+        margin: 0 8px;
+    }
+
+    .Navbar--Items--SignUp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 14px;
+        margin-left: 16px;
+        font-weight: 600 !important;
+    }
+
+    .Navbar--Items--SignUp:hover {
+        transform: scale(1.05);
+    }
+
+    .Navbar--Items--SignIn {
+        font-size: 14px;
+        font-weight: 600 !important;
+    }
+
+    .Navbar--Items--Avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        transition: all 0.25s ease;
+    }
+
+    .Navbar--Items--Login--Icon {
+        width: 72px;
+        height: auto;
+    }
+}
+
+/* PC Screen */
+@media screen and (min-width: 960px) {
+    .Navbar--Logo {
+        transition: all 0.25s ease;
+        width: 180px;
+        cursor: pointer;
+        pointer-events: all;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        fill: white;
+    }
+
+    .Navbar--Logo:hover {
+        transform: scale(1.05);
+    }
+
+    .Navbar--Logo:active {
+        transform: scale(0.9);
+    }
+
+    .Navbar--Container > ul > li {
+        transition: all 0.25s cubic-bezier(.05,.52,.41,1);
+        font-size: 14px;
+        margin: 0 12px;
+    }
+
+    .Navbar--Items--SignUp {
+        margin-left: 24px;
+        font-weight: 600 !important;
+    }
+
+    .Navbar--Items--SignUp:hover {
+        transform: scale(1.1);
+    }
+}
