@@ -10,7 +10,7 @@ You can play right now on https://openguess.pl/ or host it all by yourself!
 First, you need to fill out the `.env.local` with your informations.\
 Openguess uses https://supabase.com/ as backend, so you will need to create a free project there.\
 Google Maps JavaScript API Key is the second thing you need.\
-It might be quite expensive, so remember to cap the quota to not go beyond the free 200$ you get every month for free.\
+It might be quite expensive, so remember to cap the quota to not go beyond the free 200$ you get every month for free.
 
 In the project directory, you can run:
 
