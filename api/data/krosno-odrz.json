@@ -1,0 +1,13 @@
+{
+    "settings":
+    {
+        "map_name":"Krosno Odrzańskie",
+        "map_type":"city",
+        "minimap_initial_point": 
+        {
+           "lat": 52.053,
+           "lng": 15.099
+        },
+        "minimap_initial_zoom": 13
+     },
+"map_structure":[[{"lat":52.04339608030628,"lng":15.123832509666952},{"lat":52.063396080306276,"lng":15.123832509666952},{"lat":52.063396080306276,"lng":15.073832509666952},{"lat":52.04339608030628,"lng":15.073832509666952}]]}

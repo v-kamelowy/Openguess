@@ -1,0 +1,9 @@
+{
+    "WEB_PORT_HTTP": 3030,
+    "WEB_PORT_HTTPS": 3333,
+    "API_VERSION": "/v1",
+    "CORS_ENABLED": false,
+    "CORS_ORIGIN": "localhost",
+    "REQUEST_LOGGING": false,
+    "USE_HTTPS": false
+}

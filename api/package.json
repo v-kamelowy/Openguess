@@ -1,0 +1,18 @@
+{
+  "name": "Openguess-API",
+  "version": "1.1.0",
+  "description": "REST API for Openguess Maps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Kamelowy",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "console-log-colors": "^0.2.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}

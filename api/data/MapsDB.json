@@ -1,0 +1,53 @@
+{
+    "available_maps": [
+        {
+            "name": "World",
+            "description": "Travel all over the world!",
+            "thumbnail": "https://api.openguess.pl/cdn/FeaturedWorld.webp",
+            "featured": true,
+            "key": "world"
+        },
+        {
+            "name": "Europe",
+            "description": "The old continent awaits you.",
+            "thumbnail": "https://api.openguess.pl/cdn/Europe.webp",
+            "featured": false,
+            "key": "europe"
+        },
+        {
+            "name": "USA",
+            "description": "From LA to Florida. This is America!",
+            "thumbnail": "https://api.openguess.pl/cdn/USA.webp",
+            "featured": false,
+            "key": "usa"
+        },
+        {
+            "name": "Poland",
+            "description": "Heart of Europe. Just for you!",
+            "thumbnail": "https://api.openguess.pl/cdn/Poland.webp",
+            "featured": false,
+            "key": "poland"
+        },
+        {
+            "name": "Częstochowa",
+            "description": "Leave it to the Saints!",
+            "thumbnail": "https://api.openguess.pl/cdn/Czestochowa.webp",
+            "featured": false,
+            "key": "czestochowa"
+        },
+        {
+            "name": "Krosno Odrz.",
+            "description": "Smell of dead fish from Odra River.",
+            "thumbnail": "https://api.openguess.pl/cdn/KrosnoOdrz.webp",
+            "featured": false,
+            "key": "krosno-odrz"
+        },
+        {
+            "name": "Trójmiasto",
+            "description": "Seagull sounds all around you!",
+            "thumbnail": "https://api.openguess.pl/cdn/Trojmiasto.webp",
+            "featured": false,
+            "key": "trojmiasto"
+        }
+    ]
+}
